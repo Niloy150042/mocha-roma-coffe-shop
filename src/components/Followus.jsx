@@ -9,12 +9,12 @@ import image8 from '../assets/images/cups/Rectangle 16.png'
 
 const Followus = () => {
     return (
-        <div className="space-y-4 w-full md:w-md lg:w-[1200px] mx-auto">
+        <div className="space-y-4 w-full xl:max-w-[1000px] 2xl:max-w-[2060px] mx-auto overflow-x-hidden ">
             <div className="text-center mt">
                 <p className="font-sans">--- Follow Us Now --- </p>
                 <p className="rancho text-4xl"> Follow Us on Instagram </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center'>
                <img src={image1}  alt="" />
                <img src={image2} alt="" />
                <img src={image3} alt="" />

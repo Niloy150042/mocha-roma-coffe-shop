@@ -7,20 +7,30 @@ import Swal from "sweetalert2";
 const AddCoffe = () => {
     const navigate = useNavigate()
     const handlesubmit = (e) => {
-        e.preventDefault()
-        const name = e.target.name.value
-        const chief = e.target.chief.value
-        const supplier = e.target.supplier.value
-        const taste = e.target.taste.value
-        const category = e.target.name.value
-        const details = e.target.name.value
-        const photo = e.target.photo.value
-        const coffeDetails = { name, chief, supplier, taste, category, details, photo }
+        e.preventDefault();
+        const name = e.target.name.value.trim();
+        const chief = e.target.chief.value.trim();
+        const supplier = e.target.supplier.value.trim();
+        const taste = e.target.taste.value.trim();
+        const category = e.target.category.value.trim();
+        const details = e.target.details.value.trim();
+        const photo = e.target.photo.value.trim();
+
+        if (!name || !chief || !supplier || !taste || !category || !details || !photo) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Please fill up all required fields!",
+            });
+            return; 
+        }
+
+        const coffeDetails = { name, chief, supplier, taste, category, details, photo };
+
         fetch('http://localhost:5000/coffe', {
             method: "POST",
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(coffeDetails)
-
         })
             .then(res => res.json())
             .then(data => {
@@ -29,11 +39,13 @@ const AddCoffe = () => {
                         title: "Good job!",
                         text: "A new coffe added!",
                         icon: "success"
+                    }).then(() => {
+                        navigate('/');
                     });
                 }
-            })
+            });
+    };
 
-    }
 
 
     return (
@@ -92,6 +104,7 @@ const AddCoffe = () => {
             </div>
         </div>
     );
+
 };
 
 export default AddCoffe;

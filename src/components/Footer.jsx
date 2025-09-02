@@ -7,7 +7,6 @@ const Footer = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "50px",
-            width: "100%",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

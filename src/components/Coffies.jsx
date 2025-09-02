@@ -8,8 +8,8 @@ const Coffies = () => {
             .then(data => setCoffies(data))
     }, [])
     return (
-        <div className=" mx-auto  place-items-center  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2  mt-4">
-            {coffies.map((coffe) => <SingleCoffie key={coffe._id} coffe={coffe}></SingleCoffie>)}
+        <div className=" mx-auto  place-items-center  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  mt-4 gap-4">
+            {coffies.map((coffe) => <SingleCoffie setCoffies={setCoffies} key={coffe._id} coffe={coffe}></SingleCoffie>)}
         </div>
     );
 };

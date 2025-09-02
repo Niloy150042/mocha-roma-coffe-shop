@@ -11,7 +11,7 @@ import Popular from "../components/Popular";
 
 const Homelayout = () => {
     return (
-        <div className="w-1920px">
+        <div className="w-full max-w-[2560px] mx-auto overflow-x-hidden">
             <header>
                 <nav>
                     <Navbar></Navbar>

@@ -8,9 +8,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import logo from '../assets/images/more/logo1.png'
 const Contact = () => {
     return (
-        <div className="mt-4 w-full md:w-md lg:w-[1200px] mx-auto  flex flex-col md:flex-col lg:flex-row items-center  justify-items-center bg-[#ECEAE3] p-4 rounded">
+        <div className="mt-4 w-full md:w-full xl:w-full2xl:w-[2060px] mx-auto  flex flex-col md:flex-col lg:flex-row items-center  justify-items-center bg-[#ECEAE3] p-4 rounded">
 
-            <div className="grid grid-cols-1 justify-items-center md:justify-items-center lg:justify-items-start w-full md:w-full lg:w-[50%] mx-auto">
+            <div className="grid grid-cols-1 justify-items-center md:justify-items-center  w-full md:w-full  mx-auto">
                 <img className='h-[100px]' src={logo} alt="" />
                 <p className='rancho text-3xl text-[#331A15] '>Mocha Roma Coffe House</p>
                 <p className="w-[50%]">Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
