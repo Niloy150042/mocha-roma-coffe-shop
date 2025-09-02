@@ -40,7 +40,7 @@ const SingleCoffie = ({ coffe }) => {
             }
         });
     }
-   
+
     const { name, chief, supplier, taste, category, details, photo, _id } = coffe
     return (
         <div className=" rancho bg-gray-200 rounded-3xl h-[300px] 2xl:h-[500px] w-full md:w-[500] xl:w-[500px] 2xl:w-[1000px]  flex items-center justify-center p-3 ">
@@ -52,10 +52,9 @@ const SingleCoffie = ({ coffe }) => {
 
             </div>
             <div className="grid grid-cols-1 gap-5 ml-6 ">
-                <Link> <FaEye className="bg-[#D2B48C] p-1 text-3xl rounded" /></Link>
-                <Link  to={`/updatecoffe/${_id}`}>  <FaPen className="bg-black text-white p-1 text-3xl rounded" /></Link>
+                <Link to={`/coffedetails/${_id}`}> <FaEye className="bg-[#D2B48C] p-1 text-3xl rounded" /></Link>
+                <Link to={`/updatecoffe/${_id}`}>  <FaPen className="bg-black text-white p-1 text-3xl rounded" /></Link>
                 <Link onClick={() => handleDelete(_id)} ><MdDelete className="bg-red-600 p-1 text-white text-3xl rounded" /></Link>
-
             </div>
 
         </div>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import bgImage from '../assets/images/more/4.png';
 import Awesome from "../components/Awesome";
 import Banner from "../components/Banner";
@@ -10,6 +11,7 @@ import Popular from "../components/Popular";
 
 
 const Homelayout = () => {
+  
     return (
         <div className="w-full max-w-[2560px] mx-auto overflow-x-hidden">
             <header>
